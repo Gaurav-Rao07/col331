@@ -16,6 +16,7 @@ welcome(void) {
   cprintf("After preparing fs.img, we have rebooted %d times\n", b1->data[0]);
   b1->data[0] = b1->data[0] + 1;
   bwrite(b1);
+  brelse(b1);
 }
 
 // Bootstrap processor starts running C code here.
